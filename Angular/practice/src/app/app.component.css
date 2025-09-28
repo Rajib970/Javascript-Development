@@ -1,0 +1,36 @@
+/* .btn {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: 15px;
+    color: #ffff;
+    cursor: pointer;
+
+}
+
+.bg-green {
+    background-color: chartreuse;
+}
+
+.bg-brown {
+    background-color: brown;
+}
+
+.bg-red {
+    background-color: red;
+    ;
+}
+
+.count {
+    height: 30px;
+    width: 100px;
+    margin-top: 55px;
+    margin: auto;
+    padding: 14px;
+    background: grey;
+    border-radius: 20px;
+} */
+.error {
+    color: red;
+}

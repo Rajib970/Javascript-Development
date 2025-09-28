@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function show() {
+            var j = "J a Local Variable of outer function";
+            document.write(j + "<br>");
+            function innerFunction() {
+                var i = "K a Local Variable of Inner function";
+                document.write(i + "<br>");
+                document.write(j + "<br>");
+            }
+            innerFunction();
+            // document.write(i + "<br>");
+        }
+        show();
+    </script>
+</body>
+
+</html>
