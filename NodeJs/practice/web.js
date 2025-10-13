@@ -23,7 +23,18 @@ http.createServer((req, resp) => {
             req.on('end', () => {
                 let rawData = Buffer.concat(dataBody).toString();
                 let readableData = queryString.parse(rawData);
-                console.log(readableData);
+                let dataString = "My Name is " + readableData.name + " and My Email is " + readableData.email;
+                console.log(dataString);
+                // fs.writeFileSync("text/" + readableData.name + ".txt", dataString) # File Created in Synchronous way
+                // console.log("File Created!");
+
+                fs.writeFile("text/" + readableData.name + ".txt", dataString, 'utf-8', (err) => {  // # File Created in Asynchronous way
+                    if (err) {
+                       resp.end("Internal Server Error!")
+                    } else{
+                        console.log("File Created!")
+                   }
+                });
             })
             resp.write('<h1> Data Submitted </h1>')
         }
